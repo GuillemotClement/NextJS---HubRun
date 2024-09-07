@@ -4,6 +4,8 @@ import "./globals.css";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 config.autoAddCss = false;
 
 const geistSans = localFont({
@@ -32,7 +34,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <div className="flex-auto border-b py-8">
+            <main className="container mx-auto">{children}</main>
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

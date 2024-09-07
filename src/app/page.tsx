@@ -1,3 +1,9 @@
+// import Homepage from "./pages/Homepage";
+
 export default function Home() {
-  return <p>Homepage</p>;
+  return (
+    <div className="">
+      <h2>Homepage</h2>
+    </div>
+  );
 }
