@@ -33,10 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Analytics />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <div className="flex min-h-screen flex-col">
           <Header />
           <div className="flex flex-auto items-center border-b py-8">
