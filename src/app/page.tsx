@@ -1,9 +1,9 @@
 // import Homepage from "./pages/Homepage";
 
-export default function Home() {
+export default function Homepage() {
   return (
     <div className="">
-      <h2>Homepage</h2>
+      <p>Bienvenue sur HubRun</p>
     </div>
   );
 }
