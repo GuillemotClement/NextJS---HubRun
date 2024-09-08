@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Tool() {
   return (
-    <div className="flex flex-col px-3">
-      <h2 className="my-3 text-center text-xl font-semibold">
+    <div className="">
+      <h2 className="">
         Découvrez nos outils de calcul pratiques pour vos activités sportives
       </h2>
-      <div className="my-4 flex gap-x-3">
-        <p className="w-96 text-justify">
+      <div className="">
+        <p className="">
           Notre application vous propose une série d&apos;outils simples et
           efficaces pour vous aider à mieux planifier et analyser vos
           performances. Que vous ayez besoin de calculer des pourcentages
