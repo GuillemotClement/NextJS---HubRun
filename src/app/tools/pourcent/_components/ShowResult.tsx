@@ -1,4 +1,8 @@
-export default function ShowResult({ value }) {
+interface ShowResultProps {
+  value: number;
+}
+
+export default function ShowResult({ value }: ShowResultProps) {
   return (
     <div className="my-5 rounded-lg border px-10 py-4">
       <p className="text-xl font-bold">{value}</p>
