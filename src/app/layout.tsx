@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen flex-col">
           <Header />
-          <div className="flex-auto border-b py-8">
+          <div className="flex flex-auto items-center border-b py-8">
             <main className="container mx-auto">{children}</main>
           </div>
           <Footer />

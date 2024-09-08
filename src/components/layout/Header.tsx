@@ -25,6 +25,9 @@ export default function Header() {
         <li className="hover:text-slate-400">
           <Link href="blog">Blog</Link>
         </li>
+        <li className="hover:text-slate-400">
+          <Link href="admin">Admin</Link>
+        </li>
       </ul>
       <ul className="flex gap-x-3">
         <li className="hover:text-slate-400">
