@@ -5,7 +5,7 @@ export default function Admin() {
     <div className="">
       <ul>
         <li>
-          <Link href="/admin/race">Course</Link>
+          <Link href="/admin">Course</Link>
         </li>
       </ul>
     </div>
