@@ -4,10 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
 
-export default function FormPourcent({ setValue }) {
+interface FormValues {
+  inputUser: number;
+  purcent: number;
+}
+
+interface FormPourcentProps {
+  setValue: React.Dispatch<React.SetStateAction<FormValues>>;
+}
+
+export default function FormPourcent({ setValue }: FormPourcentProps) {
   const schema = yup.object({
     inputUser: yup
       .number()
@@ -25,13 +34,13 @@ export default function FormPourcent({ setValue }) {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     resolver: yupResolver(schema),
   });
 
-  function submit(values) {
+  const submit: SubmitHandler<FormValues> = (values) => {
     setValue(values);
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(submit)} className="">

@@ -4,15 +4,28 @@ import FormPourcent from "./_components/FormPourcent";
 import { calculPourcentage } from "@/lib/tools";
 import ShowResult from "./_components/ShowResult";
 
-export default function Pourcent() {
-  const [inputUser, setInputUser] = useState({});
-  const [result, setResult] = useState(null);
+interface inputUser {
+  purcent: number;
+  inputUser: number;
+}
 
-  const { purcent, inputUser: myValue } = inputUser;
+export default function Pourcent() {
+  const [inputUser, setInputUser] = useState<inputUser>({
+    purcent: 0,
+    inputUser: 0,
+  });
+  const [result, setResult] = useState<number | null>(null);
+
+  const { purcent = 0, inputUser: myValue = 0 } = inputUser;
 
   useEffect(() => {
     if (purcent !== undefined && myValue !== undefined) {
-      setResult(calculPourcentage(purcent, myValue));
+      const calculatedResult = calculPourcentage(purcent, myValue);
+      if (typeof calculatedResult === "number") {
+        setResult(calculatedResult);
+      } else {
+        console.error("calculPourcentage ne retourne pas un nombre valide");
+      }
     }
   }, [purcent, myValue]);
 
