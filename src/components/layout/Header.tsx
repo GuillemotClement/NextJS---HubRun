@@ -11,15 +11,15 @@ export default function Header() {
       </Link>
       <ul className="flex gap-x-3">
         <li className="hover:text-slate-400">
-          <Link href="/accueil">Accueil</Link>
+          <Link href="/">Accueil</Link>
         </li>
-        <li className="hover:text-slate-400">
+        {/* <li className="hover:text-slate-400">
           <Link href="/calendar">Calendrier</Link>
-        </li>
+        </li> */}
         <li className="hover:text-slate-400">
           <Link href="/tools">Outils</Link>
         </li>
-        <li className="hover:text-slate-400">
+        {/* <li className="hover:text-slate-400">
           <Link href="training">Entrainement</Link>
         </li>
         <li className="hover:text-slate-400">
@@ -27,9 +27,9 @@ export default function Header() {
         </li>
         <li className="hover:text-slate-400">
           <Link href="admin">Admin</Link>
-        </li>
+        </li> */}
       </ul>
-      <ul className="flex gap-x-3">
+      {/* <ul className="flex gap-x-3">
         <li className="hover:text-slate-400">
           <Link href="#">Connexion</Link>
         </li>
@@ -42,7 +42,7 @@ export default function Header() {
         <li className="hover:text-slate-400">
           <Link href="#">Deconnexion</Link>
         </li>
-      </ul>
+      </ul> */}
     </header>
   );
 }
